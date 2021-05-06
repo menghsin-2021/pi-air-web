@@ -1,17 +1,15 @@
-import os
 from datetime import datetime, timedelta, timezone
 from pymongo import MongoClient
 from pprint import pprint
 from utils import *
-from dotenv import load_dotenv
+
+# 直接用 heroku 的環境變數
+# 參考 https://devcenter.heroku.com/articles/config-vars
 
 days_back = -0.5
 range = 2.2
 start_date = datetime(2020, 2, 3, 15)
 search = 0
-
-load_dotenv()
-API_KEY = os.getenv('API_KEY')
 
 class DbWrapper:
     def __init__(self):
