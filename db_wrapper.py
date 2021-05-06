@@ -1,3 +1,4 @@
+import os
 from datetime import datetime, timedelta, timezone
 from pymongo import MongoClient
 from pprint import pprint
@@ -5,6 +6,8 @@ from utils import *
 
 # 直接用 heroku 的環境變數
 # 參考 https://devcenter.heroku.com/articles/config-vars
+
+API_KEY = os.environ.get('API_KEY')
 
 days_back = -0.5
 range = 2.2
